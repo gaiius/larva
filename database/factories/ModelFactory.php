@@ -28,7 +28,7 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Forum::class, function (Faker\Generator $faker) {
     return [
-        'name' => ucfirst($faker->word) . $faker->word,
+        'name' => ucfirst($faker->word) . ' ' . $faker->word,
         'description' => $faker->sentence(),
         'category' => rand(1, 4)
     ];
