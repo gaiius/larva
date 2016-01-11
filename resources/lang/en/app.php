@@ -20,4 +20,8 @@ return [
 
     'toggle_navigation' => 'Toggle Navigation',
 
+    'forum' => 'Forum',
+    'threads' => 'Threads',
+    'posts' => 'Posts',
+
 ];

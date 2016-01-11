@@ -9,7 +9,27 @@
                 <div class="panel-heading">{{ $category->name }}</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-md-8">@lang('app.forum')</th>
+                                <th class="col-md-2">@lang('app.threads')</th>
+                                <th class="col-md-2">@lang('app.posts')</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($category->forums as $forum)
+                            <tr>
+                                <td>
+                                    <p><a href="">{{ $forum->name }}</a></p>
+                                    <p>{{ $forum->description }}</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
             @endforeach

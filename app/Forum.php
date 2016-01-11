@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Forum extends Model
 {
     public $timestamps = false;
 
@@ -14,11 +14,11 @@ class Category extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
+        'name', 'description',
     ];
 
-    public function forums()
+    public function category()
     {
-        return $this->hasMany(Forum::class, 'category');
+        return $this->belongsTo(Category::class);
     }
 }
