@@ -11,6 +11,7 @@ install:
 
 before_script:
   - php artisan key:generate
+  - cp .env.example .env
 
 script:
   - vendor/bin/phpunit
