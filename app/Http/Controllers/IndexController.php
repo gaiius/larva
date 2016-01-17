@@ -14,7 +14,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::with('forums.threadsCount')->get();
 
         return view('index', compact('categories'));
     }
