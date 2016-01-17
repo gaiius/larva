@@ -33,3 +33,12 @@ $factory->define(App\Forum::class, function (Faker\Generator $faker) {
         'category' => rand(1, 4)
     ];
 });
+
+$factory->define(App\Thread::class, function (Faker\Generator $faker) {
+    return [
+        'title' => mb_convert_case(implode(' ', $faker->words(rand(1, 9))), MB_CASE_TITLE),
+        'author' => rand(1, 15),
+        'forum' => rand(1, 10),
+        'body' => $faker->text(),
+    ];
+});

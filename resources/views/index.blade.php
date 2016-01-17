@@ -21,7 +21,11 @@
                             @foreach ($category->forums as $forum)
                             <tr>
                                 <td>
-                                    <p><a href="">{{ $forum->name }}</a></p>
+                                    <p>
+                                        <a href="{{ URL::to('forums/' . $forum->id . '-' . str_slug($forum->name, '-')) }}">
+                                            {{ $forum->name }}
+                                        </a>
+                                    </p>
                                     <p>{{ $forum->description }}</p>
                                 </td>
                                 <td></td>

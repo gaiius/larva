@@ -24,4 +24,8 @@ return [
     'threads' => 'Threads',
     'posts' => 'Posts',
 
+    'thread' => 'Thread',
+    'replies' => 'Replies',
+    'latest_reply' => 'Latest Reply',
+
 ];

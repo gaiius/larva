@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Forum;
 use App\Http\Requests;
 
 class IndexController extends Controller

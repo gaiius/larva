@@ -31,4 +31,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/', 'IndexController@index');
     Route::get('/home', 'HomeController@index');
+
+    Route::get('/forums/{id}', 'ForumController@listThreadsForForum')
+        ->where('id', '^([0-9]+)-(.+)');
 });

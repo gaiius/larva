@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@lang('app.site_title')</title>
+    <title>
+        @if (trim($__env->yieldContent('title')))
+            @yield('title') @lang('app.title_divider') @lang('app.site_title')
+        @else
+            @lang('app.site_title')
+        @endif
+    </title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
