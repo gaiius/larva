@@ -29,8 +29,7 @@
                                                 {{ $thread->title }}
                                             </a>
                                         </p>
-                                        <p>{{ $thread->username }},
-                                            {{ date('F d, Y, h:m A', strtotime($thread->created_at)) }}</p>
+                                        <p>{{ $thread->username }}, @datetime($thread->created_at)</p>
                                     </td>
                                     <td></td>
                                     <td></td>
