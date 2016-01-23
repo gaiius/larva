@@ -42,3 +42,11 @@ $factory->define(App\Thread::class, function (Faker\Generator $faker) {
         'body' => $faker->text(),
     ];
 });
+
+$factory->define(App\Reply::class, function (Faker\Generator $faker) {
+    return [
+        'author' => rand(1, 15),
+        'thread' => rand(1, 50),
+        'body' => $faker->text(),
+    ];
+});
