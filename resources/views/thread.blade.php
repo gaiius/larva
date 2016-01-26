@@ -9,7 +9,7 @@
         <h1>{{ $thread->title }}</h1>
 
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="col-md-2">{{ $thread->username }}</div>
@@ -25,7 +25,7 @@
 
         @foreach ($replies as $reply)
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="col-md-2">{{ $reply->username }}</div>
