@@ -3,7 +3,7 @@
 @section('content')
 <div class="container spark-screen">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-9">
             @foreach($categories as $category)
                 <div class="panel panel-default">
                     <div class="panel-heading">{{ $category->name }}</div>
@@ -29,7 +29,7 @@
                                         <p>{{ $forum->description }}</p>
                                     </td>
                                     <td>
-                                        @if (count($forum->threads_count) > 0)
+                                        @if (isset($forum->threads_count))
                                             {{ $forum->threads_count->first()->count }}
                                         @else
                                             0
@@ -43,6 +43,13 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div class="col-md-3">
+            @if (Auth::guest())
+                @include('partials.blocks.login')
+            @else
+                @include('partials.blocks.user-info')
+            @endif
         </div>
     </div>
 </div>
